@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
+// Base URL for assets (works with gh-pages)
+const BASE_URL = import.meta.env.BASE_URL
+
 // YouTube Video ID
 const YOUTUBE_VIDEO_ID = 'IobNcpiwpSc'
 
@@ -112,9 +115,9 @@ const SecondPage = ({ onBack, isPlaying, toggleMusic, playerReady }) => {
         </div>
 
         <div className="photo-collage">
-          <img src="/images/img_3.png" alt="Love 1" className="photo photo-1" />
-          <img src="/images/img_4.png" alt="Love 2" className="photo photo-2" />
-          <img src="/images/img_2.png" alt="Love 3" className="photo photo-3" />
+          <img src={`${BASE_URL}images/img_3.png`} alt="Love 1" className="photo photo-1" />
+          <img src={`${BASE_URL}images/img_4.png`} alt="Love 2" className="photo photo-2" />
+          <img src={`${BASE_URL}images/img_2.png`} alt="Love 3" className="photo photo-3" />
         </div>
 
         <p className="forever-text">Forever & Always ❤️</p>
@@ -335,7 +338,7 @@ function App() {
             <div className="image-gallery">
               <div className="image-card">
                 <img
-                  src="/images/img.png"
+                  src={`${BASE_URL}images/img.png`}
                   alt="Valentine Memory 1"
                   onError={handleImageError}
                 />
@@ -345,7 +348,7 @@ function App() {
               </div>
               <div className="image-card">
                 <img
-                  src="/images/img_1.png"
+                  src={`${BASE_URL}images/img_1.png`}
                   alt="Valentine Memory 2"
                   onError={handleImageError}
                 />
